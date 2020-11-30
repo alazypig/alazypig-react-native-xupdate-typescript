@@ -1,5 +1,5 @@
 {
-  "name": "react-native-xupdate-typescript",
+  "name": "@aurora-org/react-native-xupdate-typescript",
   "description": "A React-Native plugin for XUpdate(Android Version Update Library).",
   "version": "1.0.0",
   "main": "index.js",
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/alazypig/react-native-xupdate-typescript"
+    "url": "git+https://github.com/alazypig/react-native-xupdate-typescript.git"
   },
   "author": "Edward <wang.huiyang@outlook.com> (http://alazypig.github.io)",
   "bugs": {
@@ -22,5 +22,6 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "react-native": "^0.61.5"
-  }
+  },
+  "homepage": "https://github.com/alazypig/react-native-xupdate-typescript#readme"
 }

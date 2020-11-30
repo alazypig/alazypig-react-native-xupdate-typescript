@@ -1,6 +1,6 @@
 # react-native-xupdate
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://www.npmjs.com/package/react-native-xupdate-typescript)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://www.npmjs.com/package/@aurora-org/react-native-xupdate-typescript)
 [![Issue](https://img.shields.io/github/issues/alazypig/alazypig-react-native-xupdate-typescript.svg)](https://github.com/alazypig/alazypig-react-native-xupdate-typescript/issues)
 [![Star](https://img.shields.io/github/stars/alazypig/alazypig-react-native-xupdate-typescript.svg)](https://github.com/alazypig/alazypig-react-native-xupdate-typescript)
 
@@ -8,11 +8,11 @@ A React-Native plugin for XUpdate(Android Version Update Library).
 
 ## Getting started
 
-`$ npm install react-native-xupdate-typescript --save`
+`$ npm install @aurora-org/react-native-xupdate-typescript --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-xupdate-typescript`
+`$ react-native link @aurora-org/react-native-xupdate-typescript`
 
 ### Manual installation
 
@@ -25,12 +25,12 @@ A React-Native plugin for XUpdate(Android Version Update Library).
 
 2. Append the following lines to `android/settings.gradle`:
    ```
-   include ':react-native-xupdate-typescript'
-   project(':react-native-xupdate-typescript').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-xupdate-typescript/android')
+   include ':@aurora-org/react-native-xupdate-typescript'
+   project(':@aurora-org/react-native-xupdate-typescript').projectDir = new File(rootProject.projectDir, 	'../node_modules/@aurora-org/react-native-xupdate-typescript/android')
    ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
    ```
-     compile project(':react-native-xupdate-typescript')
+     compile project(':@aurora-org/react-native-xupdate-typescript')
    ```
 
 ## Usage
@@ -40,7 +40,7 @@ Only use for Android.
 ### Initialization
 
 ```
-import {XUpdate} from 'react-native-xupdate-typescript';
+import {XUpdate} from '@aurora-org/react-native-xupdate-typescript';
 
 ///初始化
 initXUpdate() {

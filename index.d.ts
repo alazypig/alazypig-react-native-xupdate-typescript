@@ -1,4 +1,4 @@
-declare module 'react-native-xupdate-typescript' {
+declare module '@aurora-org/react-native-xupdate-typescript' {
   export class InitArgs {
     debug: boolean // log debug
     isPost: boolean // post request
