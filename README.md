@@ -27,8 +27,8 @@ React Native after 0.60 will autolinked modules.
 <s>2. Append the following lines to `android/settings.gradle`:</s>
 
 ```gradle
-include ':@aurora-org/react-native-xupdate-typescript'
-project(':@aurora-org/react-native-xupdate-typescript').projectDir = new File(rootProject.projectDir, 	'../node_modules/@aurora-org/react-native-xupdate-typescript/android')
+include ':@aurora-org_react-native-xupdate-typescript'
+project(':@aurora-org_react-native-xupdate-typescript').projectDir = new File(rootProject.projectDir, 	'../node_modules/@aurora-org_react-native-xupdate-typescript/android')
 ```
 
 <s>3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:</s>
@@ -92,48 +92,48 @@ initXUpdate() {
 ### CheckUpdate
 
 ```javascript
-    checkUpdateDefault() {
-        let args = new UpdateArgs(_updateUrl);
-        XUpdate.update(args);
-    }
+checkUpdateDefault() {
+    let args = new UpdateArgs(_updateUrl);
+    XUpdate.update(args);
+}
 
-    checkUpdateSupportBackground() {
-        let args = new UpdateArgs(_updateUrl);
-        args.supportBackgroundUpdate = true;
-        XUpdate.update(args);
-    }
+checkUpdateSupportBackground() {
+    let args = new UpdateArgs(_updateUrl);
+    args.supportBackgroundUpdate = true;
+    XUpdate.update(args);
+}
 
-    checkUpdateRatio() {
-        let args = new UpdateArgs(_updateUrl);
-        args.widthRatio = 0.6;
-        XUpdate.update(args);
-    }
+checkUpdateRatio() {
+    let args = new UpdateArgs(_updateUrl);
+    args.widthRatio = 0.6;
+    XUpdate.update(args);
+}
 
-    // mandatory update
-    checkUpdateForce() {
-        let args = new UpdateArgs(_updateUrl2);
-        XUpdate.update(args);
-    }
+// mandatory update
+checkUpdateForce() {
+    let args = new UpdateArgs(_updateUrl2);
+    XUpdate.update(args);
+}
 
-    // need root privileges
-    checkUpdateAutoMode() {
-        let args = new UpdateArgs(_updateUrl);
-        args.isAutoMode = true;
-        XUpdate.update(args);
-    }
+// need root privileges
+checkUpdateAutoMode() {
+    let args = new UpdateArgs(_updateUrl);
+    args.isAutoMode = true;
+    XUpdate.update(args);
+}
 
-    enableChangeDownLoadType() {
-        let args = new UpdateArgs(_updateUrl);
-        args.overrideGlobalRetryStrategy = true;
-        args.enableRetry = true;
-        args.retryContent = 'Switch to another site?';
-        args.retryUrl = 'https://example.com/test.apk';
-        XUpdate.update(args);
-    }
+enableChangeDownLoadType() {
+    let args = new UpdateArgs(_updateUrl);
+    args.overrideGlobalRetryStrategy = true;
+    args.enableRetry = true;
+    args.retryContent = 'Switch to another site?';
+    args.retryUrl = 'https://example.com/test.apk';
+    XUpdate.update(args);
+}
 
-    showRetryDialogTip() {
-        XUpdate.showRetryUpdateTip('content', 'url');
-    }
+showRetryDialogTip() {
+    XUpdate.showRetryUpdateTip('content', 'url');
+}
 ```
 
 ### Custom JSON Format
