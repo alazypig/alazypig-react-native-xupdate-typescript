@@ -48,9 +48,10 @@ declare module '@aurora-org/react-native-xupdate-typescript' {
     apkMd5: string
   }
 
+  type ParseJson = (jsonStr: string) => UpdateEntity
   export class UpdateParser {
-    parseJson: (json: string) => UpdateEntity
-    constructor(parser: typeof this.parseJson)
+    parseJson: ParseJson
+    constructor(parser: ParseJson)
   }
 
   export type XUpdateType = {
@@ -59,7 +60,10 @@ declare module '@aurora-org/react-native-xupdate-typescript' {
     addErrorListener: (listener: (event: any) => void) => void
     removeErrorListener: (listener: (event: any) => void) => void
     update: (updateArgs?: UpdateArgs) => Promise<string>
-    updateByInfo: (updateArgs?: UpdateArgs, updateEntity: UpdateEntity) => void
+    updateByInfo: (
+      updateArgs: UpdateArgs,
+      updateEntity: UpdateEntity,
+    ) => {catch: (e: any) => any}
     showRetryUpdateTip: (retryContent: string, retryUrl: string) => void
   }
 
